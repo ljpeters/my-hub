@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1.4
-FROM docker.io/library/python:slim-bullseye AS builder
+FROM docker.io/library/python:slim-bullseye
 
 RUN mkdir /app
 
