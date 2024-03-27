@@ -1,5 +1,7 @@
 # syntax=docker/dockerfile:1.4
-FROM --platform=$BUILDPLATFORM docker.io/library/python:slim-bullseye AS builder
+FROM docker.io/library/python:slim-bullseye AS builder
+
+RUN mkdir /app
 
 WORKDIR /app
 
@@ -10,3 +12,4 @@ COPY . /app
 
 ENTRYPOINT ["python3"]
 CMD ["app.py"]
+#CMD tail -f /dev/null
